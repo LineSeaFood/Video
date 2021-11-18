@@ -27,7 +27,7 @@
 
 
     player = videojs('example-video2',{"fluid": true});
-    player.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood1.smil/playlist.m3u8" });
+    player.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood.smil/playlist.m3u8" });
 	player.play();
 	
 	var player2;
@@ -36,7 +36,7 @@
 
 
     player2 = videojs('example-video3',{"fluid": true});
-    player2.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood.smil/playlist.m3u8" });
+    player2.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood1.smil/playlist.m3u8" });
 	player2.play();
   }
 </script>
@@ -47,10 +47,10 @@
 <table style="border-spacing: 0px;" width="100%" height="100%">
 <tr>
 	<td width="50%">
-		<video id="example-video3" class="video-js vjs-default-skin"  style="object-fit: fill;" controls></video>
+		<video id="example-video3" class="video-js vjs-default-skin"  style="object-fit: fill;" controls data-setup='{ "autoplay": true, "controls": true, "poster": "", "preload": "auto" }'></video>
 	</td>
 	<td width="50%">
-		<video id="example-video2" class="video-js vjs-default-skin"  style="object-fit: fill;" controls></video>
+		<video id="example-video2" class="video-js vjs-default-skin"  style="object-fit: fill;" controls data-setup='{ "autoplay": true, "controls": true, "poster": "", "preload": "auto" }'></video>
 	</td>
 	
 </tr>
