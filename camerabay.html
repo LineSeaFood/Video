@@ -21,14 +21,14 @@
   function init1()
   {
 	var player;
-        player = videojs('example-video2',{"fluid": true,"autoplay":true});
+        player = videojs('example-video2',{"fluid": true,"autoplay":true,maxBufferLength:60});
         player.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood.smil/playlist.m3u8" });
 	player.play();
   }
   function init2()
   {
 	var player2;
-    player2 = videojs('example-video3',{"fluid": true,"autoplay":true});
+    player2 = videojs('example-video3',{"fluid": true,"autoplay":true,maxBufferLength:60});
     player2.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood1.smil/playlist.m3u8" });
 	player2.play();
   }	
