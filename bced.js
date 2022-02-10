@@ -11292,7 +11292,7 @@
                 }
 				if(t.url=="/v3/fe/fonts/?fi=90028%2C90029%2C10006%2C60037")
 				{
-					t.url='/v3/fe/fonts/fi.json';
+					t.url='/Video/v3/fe/fonts/fi.json';
 				}
                 var m = s(t.baseURL, t.url);
 				//var m = s("https://www.logaster.com", t.url);
