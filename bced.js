@@ -12137,6 +12137,21 @@
                     null !== t && (this._lastColorCombination = t.clone());
                     var n = [];
                     this.clear();
+					//todo
+					/*if(_app.currentSide==1)
+					{
+						
+						
+						
+						const image = document.getElementById('qrcode');
+
+						
+						this.context2d.drawImage(image, 0, 0, 150, 150, 553, 187, 120, 120);
+						
+						
+					}*/
+					
+					
                     var r = this._calculateMatrix(),
                         i = this.getOffset(r);
                     r.concat(i.offsetMatrix);
@@ -12153,8 +12168,12 @@
                 this.context2d.drawImage(this.watermark, 0, 0)
             }, t.prototype.drawOutline = function() {
                 this.context2d.save(), null !== this._offsetMatrix && this._offsetMatrix.setToContext2d(this.context2d), this.context2d.lineWidth = 2, this.context2d.strokeRect(this.traceRect.x, this.traceRect.y, this.traceRect.width * this.zoom, this.traceRect.height * this.zoom), this.context2d.restore()
-            }, t.prototype.clear = function() {
-                i.Matrix.resetContext2d(this.context2d), this.context2d.clearRect(0, 0, this.context2d.canvas.width, this.context2d.canvas.height)
+            }, t.prototype.clear = function() {			
+                i.Matrix.resetContext2d(this.context2d);
+				this.context2d.clearRect(0, 0, this.context2d.canvas.width, this.context2d.canvas.height);
+				
+				
+				
             }, t.prototype.getOffset = function(t) {
                 return {
                     offsetMatrix: new i.Matrix
@@ -19824,7 +19843,15 @@
                     this._forceInit = !1
                 }
             }, t.prototype.draw = function() {
-                this.init(), this.clear(), this.context2d.save(), this.context2d.fillStyle = "#ffffff", this.context2d.fillRect(0, 0, this.context2d.canvas.width, this.context2d.canvas.height), this.context2d.restore(), this.drawItems()
+                this.init();
+				this.clear();
+				this.context2d.save();
+				this.context2d.fillStyle = "#ffffff";
+				this.context2d.fillRect(0, 0, this.context2d.canvas.width, this.context2d.canvas.height);
+				this.context2d.restore();
+				this.drawItems();
+				
+				
             }, t.prototype.drawItems = function() {
                 for (var t = 0, e = this.items; t < e.length; t++) {
                     var n = e[t];
@@ -19832,6 +19859,20 @@
                 }
             }, t.prototype.clear = function() {
                 s.Matrix.resetContext2d(this.context2d), this.context2d.clearRect(0, 0, this.context2d.canvas.width, this.context2d.canvas.height)
+				//TODO
+				/*if(_app.currentSide==1 && this.canvas.id=="front-canvas")
+					{
+						
+						
+						
+						const image = document.getElementById('qrcode');
+
+						
+						this.context2d.drawImage(image, 0, 0, 150, 150, 553, 187, 120, 120);
+						
+						
+					}*/
+				
             }, t.prototype.createItemView = function(t) {
                 var e = null;
                 switch (t.type) {
@@ -21206,7 +21247,27 @@
                 enumerable: !1,
                 configurable: !0
             }), e.prototype.drawItem = function(e) {
-                t.prototype.drawItem.call(this, e), this.tempContext2d = s.Context2DManager.forBrandProductItem(this.context2d.canvas.width, this.context2d.canvas.height), null === this.logoView && (this.logoView = new o.LogoView(this.tempContext2d), this.logoView.padding = 0, this.logoView.traceRect = this.item.bounds), this.logoView.offsetMatrix = e, this.logoView.logo = this.item.logo, this.logoView.draw(this.item.fill.getColorCombination(this.item.product.brand.colorRange)), this.context2d.drawImage(this.tempContext2d.canvas, 0, 0)
+                t.prototype.drawItem.call(this, e);
+				this.tempContext2d = s.Context2DManager.forBrandProductItem(this.context2d.canvas.width, this.context2d.canvas.height);
+				null === this.logoView && (this.logoView = new o.LogoView(this.tempContext2d), this.logoView.padding = 0, this.logoView.traceRect = this.item.bounds);
+				this.logoView.offsetMatrix = e;
+				this.logoView.logo = this.item.logo;
+				this.logoView.draw(this.item.fill.getColorCombination(this.item.product.brand.colorRange));
+				this.context2d.drawImage(this.tempContext2d.canvas, 0, 0);
+				
+				//todo
+				if(_app.currentSide==1 && this.context2d.canvas.id=="front-canvas")
+				{
+						
+						
+						
+						const image = document.getElementById('qrcode');
+
+						
+						this.context2d.drawImage(image, 0, 0, 150, 150, 553, 187, 120, 120);
+						
+						
+				}
             }, e
         }(i.BPItemView);
     e.BPLogoItemView = a
