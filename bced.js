@@ -11294,6 +11294,22 @@
 				{
 					t.url='/Video/v3/fe/fonts/fi.json';
 				}
+				if(t.url=="https://1757140519.rsc.cdn77.org/static/v3/fonts/10006/10006.html")
+				{
+					t.url='/Video/10006.html';
+				}
+				if(t.url=="https://1757140519.rsc.cdn77.org/static/v3/fonts/90029/90029.html")
+				{
+					t.url='/Video/90029.html';
+				}
+				if(t.url=="https://1757140519.rsc.cdn77.org/static/v3/fonts/60037/60037.html")
+				{
+					t.url='/Video/60037.html';
+				}
+				if(t.url=="https://1757140519.rsc.cdn77.org/static/v3/fonts/90028/90028.html")
+				{
+					t.url='/Video/90028.html';
+				}
                 var m = s(t.baseURL, t.url);
 				//var m = s("https://www.logaster.com", t.url);
                 if (p.open(t.method.toUpperCase(), o(m, t.params, t.paramsSerializer), !0), p.timeout = t.timeout, p.onreadystatechange = function() {
