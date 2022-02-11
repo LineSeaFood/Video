@@ -25,7 +25,13 @@
 			 var _app;
               function saveimg()
 			  {
-				
+				$(".form-control").each(function() {
+	if(!this.hasAttribute("data-uid"))
+	{
+		this.click()
+	}
+	
+});
 				var link = document.createElement("a");
 				  link.setAttribute('download', 'Front.png');
 				  link.setAttribute('href', $("#front-canvas")[0].toDataURL("image/png").replace("image/png", "image/octet-stream"));
