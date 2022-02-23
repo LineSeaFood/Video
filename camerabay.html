@@ -32,7 +32,8 @@
   {
 	var player2;
     player2 = videojs('example-video3',{"fluid": true,"autoplay":true,maxBufferLength:120,maxBufferSize: 120 * 1000 * 1000,});
-    player2.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood1.smil/playlist.m3u8" });
+    //player2.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood1.smil/playlist.m3u8" });
+	   player2.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrmaster1.smil/playlist.m3u8" });
 	player2.play();
   }	
 	
@@ -49,16 +50,16 @@
 <body onload="init()">
 <table style="border-spacing: 0px;" width="100%" height="100%">
 <tr>
-	<!--<td width="50%">
+	<td width="100%">
 		<video id="example-video3" class="video-js vjs-default-skin"  style="object-fit: fill;" muted controls autoplay></video>
-	</td>-->
+	</td>
 	<td width="100%">
 		<video id="example-video2" class="video-js vjs-default-skin"  style="object-fit: fill;" muted controls autoplay></video>
 	</td>
 	
 </tr>
 <tr>
-	<!--<td><button onclick="init2()">start</button> </td>-->
+	<td><button onclick="init2()">start</button> </td>
 	<td><button onclick="init1()">start</button></td>
 </tr>
 </table>
