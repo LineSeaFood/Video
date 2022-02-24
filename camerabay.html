@@ -23,8 +23,8 @@
 	var player;
         player = videojs('example-video2',{"fluid": true,"autoplay":true,maxBufferLength:120,maxBufferSize: 120 * 1000 * 1000,});
 	 
-	  player.src({ type: 'application/x-mpegURL', src: " https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrmaster1.smil/playlist.m3u8" });
-        //player.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood.smil/playlist.m3u8" });
+	//  player.src({ type: 'application/x-mpegURL', src: " https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrmaster1.smil/playlist.m3u8" });
+        player.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood.smil/playlist.m3u8" });
 	//  player.src({ type: 'application/x-mpegURL', src: "https://live.prd.dlive.tv/hls/live/austin.su.m3u8?web=true" });
 	player.play();
   }
@@ -32,8 +32,8 @@
   {
 	var player2;
     player2 = videojs('example-video3',{"fluid": true,"autoplay":true,maxBufferLength:120,maxBufferSize: 120 * 1000 * 1000,});
-    //player2.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood1.smil/playlist.m3u8" });
-	   player2.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrmaster1.smil/playlist.m3u8" });
+    player2.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrwood1.smil/playlist.m3u8" });
+	//   player2.src({ type: 'application/x-mpegURL', src: "https://camerabaymbr-walkgame.cdn.hinet.net/walkgame-camerabaymbr/smil:mbrmaster1.smil/playlist.m3u8" });
 	player2.play();
   }	
 	
